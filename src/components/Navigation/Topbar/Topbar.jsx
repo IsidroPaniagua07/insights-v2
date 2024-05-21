@@ -38,7 +38,7 @@ const Topbar = () => {
         <input type="text" placeholder="Search by account number, name, e-mail address or machine location" className=" w-max-[1371px] w-full"/>
         </div>
         <div className=" w-fit">
-          <select className="text-[0.9em] py-[4px]" value={selectedOption} onChange={handleOptionChange}>
+          <select className="text-[0.9em] py-[4px]">
             {/* Render 'Forms & Apps' as the default selected option */}
             <option value={0}  style={{display: 'none'}}>Forms & Apps</option>
             {/* Render the rest of the options, excluding 'Forms & Apps' */}
