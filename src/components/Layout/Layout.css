@@ -24,5 +24,7 @@
   .content {
     flex: 1;
     padding: 2px;
+    background-color: #F2F2F2;
+    color:black;
     overflow-y: auto; /* Optional: scroll content if it overflows */
   }

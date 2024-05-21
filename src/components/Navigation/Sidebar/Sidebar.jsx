@@ -42,7 +42,7 @@ const Sidebar = () => {
               onClick={() => navigate(option.link)}
               className={`
                 ${currentPath === option.link ? 'bg-[#203A45] text-white' : 'hover:bg-[#ececec] hover:text-black text-[#515151]'}
-                w-full flex flex-row items-center text-black text-left rounded-none px-4 gap-2 py-2 font-normal h-[43px]  transition-colors duration-200
+                w-full flex flex-row items-center text-left rounded-none px-4 gap-2 py-2 font-normal h-[43px]  transition-colors duration-200
                 `}
               >
                 <span className='w-[20px]'>

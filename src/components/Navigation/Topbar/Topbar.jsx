@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../../AuthContext/AuthContext';
+import jamulLogo from '../../../../public/jamul-logo.png';
 // import styles from './Topbar.module.css';
 
 const Topbar = () => {
@@ -42,11 +43,14 @@ const Topbar = () => {
 
   return (
     <>
-      <nav className='flex justify-between items-center gap-4 h-full w-full bg-[#203A45] text-white px-2'>
-          <span className="w-[8%] text-center">Insights</span>
-          <input type="text" placeholder="Search by account number, name, e-mail address or machine location" className="w-full"/>
-          <div className="w-[10%]">
-          <select className="text-[0.9em] py-1" value={selectedOption} onChange={handleOptionChange}>
+      <nav className='flex justify-between items-center gap-4 h-full w-full bg-[#203A45] text-white px-4 pb-2'>
+        <div className='flex w-full'>
+          <img src={jamulLogo} alt="Jamul Tear Drop Logo" className='h-[25px] w-[15.6px] mr-3'/>
+          <span className="w-fit text-center mr-6">Insights</span>
+        <input type="text" placeholder="Search by account number, name, e-mail address or machine location" className=" w-max-[1371px] w-full"/>
+        </div>
+        <div className=" w-fit">
+          <select className="text-[0.9em] py-[4px]" value={selectedOption} onChange={handleOptionChange}>
             {/* Render 'Forms & Apps' as the default selected option */}
             <option value={0}  style={{display: 'none'}}>Forms & Apps</option>
             {/* Render the rest of the options, excluding 'Forms & Apps' */}
@@ -56,7 +60,7 @@ const Topbar = () => {
                   {option.label}
                 </option>
               ))}
-          </select>
+            </select>
         </div>
       </nav>
     </>
