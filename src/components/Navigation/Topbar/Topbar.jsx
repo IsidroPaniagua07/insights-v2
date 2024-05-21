@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { useAuth } from '../../AuthContext/AuthContext';
-import jamulLogo from '../../../../public/jamul-logo.png';
-// import styles from './Topbar.module.css';
+import jamulLogo from '/jamul-logo.png';
 
 const Topbar = () => {
   const { isAuthenticated, login, logout } = useAuth();
-  const [selectedOption, setSelectedOption] = useState(0); // Track the selected option
   const handleLogin = () => {
     const userData = { name: "John Doe", email: "john.doe@example.com" };
     login(userData);
@@ -24,16 +22,6 @@ const Topbar = () => {
     )
   }
 
-  const handleOptionChange = (event) => {
-    // const selectedIndex = parseInt(event.target.value);
-    // setSelectedOption(selectedIndex);
-
-    // // Redirect to the selected option's link
-    // const selectedLink = options[selectedIndex].link;
-    // if (selectedLink) {
-    //   router.push(selectedLink);
-    // }
-  };
 
   const options = [
     { id: 0, label: 'home', link: '/home' },

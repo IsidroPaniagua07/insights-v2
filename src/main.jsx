@@ -11,6 +11,7 @@ import Redeem from './routes/Redeem/Redeem';
 import Reports from './routes/Reports/Reports';
 import GroupManager from './routes/GroupManager/GroupManager';
 import Poker from './routes/Poker/Poker';
+import Admin from './routes/Admin/Admin';
 import { AuthProvider } from './components/AuthContext/AuthContext';
 import './index.css';
 
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/poker",
         element: <ProtectedRoute element={<Poker />} />,
+      },
+      {
+        path: "/admin",
+        element: <ProtectedRoute element={<Admin />} />,
       },
     ],
   },
