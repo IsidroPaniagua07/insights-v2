@@ -10,17 +10,17 @@ const Sidebar = () => {
   const currentPath = location.pathname.toLowerCase();
   console.log(currentPath)
   const { isAuthenticated, login, logout } = useAuth();
-    if (!isAuthenticated) {
-      return (
-      <>
-          <nav>
-        <div className="flex flex-col gap-2 items-center">
+    // if (!isAuthenticated) {
+    //   return (
+    //   <>
+    //       <nav>
+    //     <div className="flex flex-col gap-2 items-center">
 
-        </div>
-      </nav>
-      </>
-      )
-    }
+    //     </div>
+    //   </nav>
+    //   </>
+    //   )
+    // }
 
   const options = [
     {label: 'Home', link: '/', icon: faHouse},

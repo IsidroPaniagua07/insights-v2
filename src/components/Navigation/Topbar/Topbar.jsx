@@ -9,18 +9,18 @@ const Topbar = () => {
     login(userData);
   };
 
-  if (!isAuthenticated) {
-    return (
-      <>
-        <nav className='flex flex-row bg-[#203A45]'>
-          <p>
-          Please Login to Search for Patrons
-          </p>
-            <button onClick={handleLogin}>Login</button>
-        </nav>
-      </>
-    )
-  }
+  // if (!isAuthenticated) {
+  //   return (
+  //     <>
+  //       <nav className='flex flex-row bg-[#203A45]'>
+  //         <p>
+  //         Please Login to Search for Patrons
+  //         </p>
+  //           <button onClick={handleLogin}>Login</button>
+  //       </nav>
+  //     </>
+  //   )
+  // }
 
 
   const options = [
