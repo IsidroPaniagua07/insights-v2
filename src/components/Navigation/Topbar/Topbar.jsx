@@ -46,7 +46,7 @@ const Topbar = () => {
           <span className="w-[8%] text-center">Insights</span>
           <input type="text" placeholder="Search by account number, name, e-mail address or machine location" className="w-full"/>
           <div className="w-[10%]">
-          <select className="dropdown-menu" value={selectedOption} onChange={handleOptionChange}>
+          <select className="text-[0.9em] py-1" value={selectedOption} onChange={handleOptionChange}>
             {/* Render 'Forms & Apps' as the default selected option */}
             <option value={0}  style={{display: 'none'}}>Forms & Apps</option>
             {/* Render the rest of the options, excluding 'Forms & Apps' */}

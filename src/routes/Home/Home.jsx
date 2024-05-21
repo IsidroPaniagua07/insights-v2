@@ -5,7 +5,7 @@ const Home = () => {
   const { isAuthenticated, login, logout } = useAuth();
 
   return (
-    <div>
+    <div className='bg-[#3D3D3D] h-full'>
       <h1>Home</h1>
     </div>
   );
