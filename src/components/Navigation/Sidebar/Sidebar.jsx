@@ -20,7 +20,7 @@ const Sidebar = () => {
     }
 
   const options = [
-    {label: 'Home', link: '/home', icon: faHouse},
+    {label: 'Home', link: '/', icon: faHouse},
     {label: 'Account History', link: '/history', icon: faClockRotateLeft },
     {label: 'Patron', link: '/Patron', icon: faUser },
     {label: 'Redeem', link: '/redeem', icon: faTicket},
