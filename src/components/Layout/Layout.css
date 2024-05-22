@@ -8,12 +8,15 @@
 
   .topbar {
     width: 100%;
-    height: 55px; /* Adjust the height as needed */
+    height: 7%; /* Adjust the height as needed */
+    min-height: 7%; /* Ensure it takes at least 55px */
   }
 
   .sidebar-content-container {
     display: flex;
     flex: 1;
+    height: 93%;
+    min-height: 93%; /* Ensure it takes at least 93% */
   }
 
   .sidebar {

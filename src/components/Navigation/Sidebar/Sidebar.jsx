@@ -44,7 +44,7 @@ const Sidebar = () => {
               key={index}
               onClick={() => navigate(option.link)}
               className={`
-                ${currentPath === option.link ? 'bg-[#203A45] text-white' : 'hover:bg-[#ececec] hover:text-black text-gray-500'}
+                ${currentPath === option.link ? 'bg-[#203A45] text-white' : 'hover:bg-[#ececec] hover:text-black text-gray-500 bg-white'}
                 w-full flex flex-row items-center text-left rounded-none px-4 gap-2 py-2 font-normal h-[43px]  transition-colors duration-200
                 `}
               >
