@@ -26,8 +26,18 @@
 
   .content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2px;
     background-color: #F2F2F2;
     color:black;
     overflow-y: auto; /* Optional: scroll content if it overflows */
+  }
+
+  .content > div {
+    height: 99%;
+    width: 99%;
+    background-color: white;
   }

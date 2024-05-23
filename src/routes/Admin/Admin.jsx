@@ -2,7 +2,7 @@
 
 const Admin = () => {
     return (
-        <div>
+        <div className="flex h-full w-full rounded-md">
             <h1>Admin</h1>
         </div>
     )
