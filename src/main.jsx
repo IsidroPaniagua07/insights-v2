@@ -13,6 +13,8 @@ import GroupManager from './routes/GroupManager/GroupManager';
 import Poker from './routes/Poker/Poker';
 import Admin from './routes/Admin/Admin';
 import { AuthProvider } from './components/AuthContext/AuthContext';
+import { Provider } from 'react-redux';
+import store from './components/store/store';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -66,7 +68,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+    <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
     </AuthProvider>
+
   </React.StrictMode>,
 );

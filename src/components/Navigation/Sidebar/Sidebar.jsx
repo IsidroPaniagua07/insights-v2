@@ -32,12 +32,16 @@ const Sidebar = () => {
     {label: 'Admin', link: false, icon: faGear, nested: [
       {label: 'Users', link: '/admin/users'},
       {label: 'Roles', link: '/admin/roles'},
-
+      {label: 'Users', link: '/admin/users'},
+      {label: 'Roles', link: '/admin/roles'},
+      {label: 'Users', link: '/admin/users'},
+      {label: 'Roles', link: '/admin/roles'},
     ]},
+    {label: 'Poker', link: '/poker', icon: faDiamond},
   ];
 
   const collapseAll = () => {
-    
+
   }
 
   return (

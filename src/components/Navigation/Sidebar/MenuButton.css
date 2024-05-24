@@ -1,0 +1,32 @@
+/* General styles for the sub-menu */
+.subMenuDiv {
+    overflow: hidden;
+    box-sizing: border-box; /* Ensure padding is included in the height calculation */
+    width: 100%;
+  }
+
+  /* Style for the nested buttons */
+  .subMenuDiv button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    border: none;
+    padding-left: 60px;
+    gap: 0.5rem;
+    height: 43px;
+    font-size: 15px;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
+    background-color: transparent;
+
+  }
+
+  .subMenuDiv button:hover {
+    background-color: #ececec;
+    color: black;
+  }
+
+  .subMenuDiv button .icon {
+    width: 20px;
+  }
