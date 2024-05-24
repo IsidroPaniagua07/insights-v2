@@ -34,7 +34,7 @@ const Topbar = () => {
       <nav className='flex justify-between items-center gap-4 h-full w-full bg-[#203A45] text-white px-4 pb-2'>
         <div className='flex w-full'>
           <img src={jamulLogo} alt="Jamul Tear Drop Logo" className='h-[25px] w-[15.6px] mr-3'/>
-          <span className="w-fit text-center mr-6">Insights</span>
+          <span className="w-fit text-center mr-6">Intuition</span>
         <input type="text" placeholder="Search by account number, name, e-mail address or machine location" className=" w-max-[1371px] w-full"/>
         </div>
         <div className=" w-fit">
