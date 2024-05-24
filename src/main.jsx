@@ -6,7 +6,8 @@ import Layout from './components/Layout/Layout';
 import Home from './routes/Home/Home';
 import Login from './routes/Login/Login';
 import History from './routes/History/History';
-import Patron from './routes/Patron/Patron';
+import Comp from './routes/Patron/Comp/Comp';
+import SwipeLog from './routes/Patron/SwipeLog/SwipeLog';
 import Redeem from './routes/Redeem/Redeem';
 import Reports from './routes/Reports/Reports';
 import GroupManager from './routes/GroupManager/GroupManager';
@@ -34,8 +35,12 @@ const router = createBrowserRouter([
         element: <ProtectedRoute element={<History />} />,
       },
       {
-        path: "/patron",
-        element: <ProtectedRoute element={<Patron />} />,
+        path: "/patron/comp",
+        element: <ProtectedRoute element={<Comp />} />,
+      },
+      {
+        path: "/patron/swipelog",
+        element: <ProtectedRoute element={<SwipeLog />} />,
       },
       {
         path: "/redeem",
