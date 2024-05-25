@@ -3,6 +3,9 @@
     overflow: hidden;
     box-sizing: border-box; /* Ensure padding is included in the height calculation */
     width: 100%;
+    background-color: rgb(170, 170, 170);
+    border-radius:  5px;
+    color: white;
   }
 
   /* Style for the nested buttons */
@@ -13,12 +16,15 @@
     align-items: center;
     text-align: left;
     border: none;
-    padding-left: 60px;
+    padding: 8px 0px 8px 65px;
     gap: 0.5rem;
     height: 43px;
-    font-size: 15px;
+    max-height: 38px;
+    font-size: 1.2rem;
     transition: background-color 0.5s ease-out, color 0.5s ease-out;
     background-color: transparent;
+    color:inherit
+
 
   }
 
@@ -34,4 +40,13 @@
 
   .faDiv {
     width: 20px;
+    padding-right: 2rem;
+
+
+  }
+
+  .btn {
+    max-height: 55px;
+    min-height: 55px;
+    height: 55px;
   }

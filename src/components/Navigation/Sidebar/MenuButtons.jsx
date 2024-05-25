@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useSelector, useDispatch } from 'react-redux';
-import { faHouse, faUser, faClockRotateLeft, faTicket, faClone, faPeopleGroup, faDiamond, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faUser, faClockRotateLeft, faTicket, faClone, faPeopleGroup, faDiamond, faGear, faCaretRight, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { toggleMenu } from '../../store/navSlice'
 import './MenuButtons.css';
 import Submenu from "./Submenu";
@@ -16,10 +16,8 @@ const MenuButtons = () => {
 
     const handleClick = (element) => {
       const { labelId, link } = element;
-      // console.log(element)
         if (link) navigate(link)
         else {
-      // console.log('DISPATCH')
       dispatch(toggleMenu(labelId))}
       };
 
@@ -39,24 +37,38 @@ const MenuButtons = () => {
           { labelId: 'roles', label: 'Roles', link: '/admin/roles' },
         ]}
       ];
+
+      const renderCaret = (element) => {
+        openMenus.includes(element.labelId)
+        if (openMenus.includes(element.labelId) && element.nested) {
+          return <FontAwesomeIcon icon={faCaretDown} />
+        } else if (!openMenus.includes(element.labelId) && element.nested) {
+          return <FontAwesomeIcon icon={faCaretRight} />
+        }
+        else return null
+      }
+
     return (
       <>
       {options.map((element, index) => {
         // console.log(element,'element')
         return (
 
-      <div key={index} className="flex h-full w-full flex-col min-h-[43px]">
+      <div key={index} className="flex h-full w-full flex-col min-h-[43px] sidebar-div">
         <button
             onClick={() => handleClick(element)}
             className={`${(currentPath.parent === element.labelId)
               ? 'bg-[#203A45] text-white'
               : 'hover:bg-[#ececec] hover:text-black text-gray-500 bg-white'}
               w-full flex flex-row items-center text-left px-4 gap-2 py-2 min-h-[43px]
-              transition-colors duration-200`}>
-            <image className='faDiv'>
+              transition-colors duration-200 btn`}>
+            <div className='faDiv '>
                 <FontAwesomeIcon icon={element.icon} />
-            </image>
-            {element.label}
+            </div>
+            <div className="flex flex-row w-full h-full justify-between items items-center ">
+              {element.label}
+              {renderCaret(element)}
+            </div>
         </button>
 
         {element.nested

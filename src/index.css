@@ -61,7 +61,7 @@ h1 {
   line-height: 1.1;
 }
 
-.btn {
+/* .btn {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -71,14 +71,14 @@ h1 {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-.btn:hover {
+} */
+/* .btn:hover {
   border-color: #646cff;
 }
 .btn:focus,
 .btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

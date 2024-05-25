@@ -20,8 +20,9 @@
   }
 
   .sidebar {
-    width: 230px; /* Adjust the width as needed */
+    min-width: 310px; /* Adjust the width as needed */
     height: 100%; /* Ensure it takes full height */
+    font-size: rem;
   }
 
   .content {
@@ -40,4 +41,9 @@
     height: 99%;
     width: 99%;
     background-color: white;
+  }
+
+  .sidebar-div {
+    font-size: 1.6rem
+
   }

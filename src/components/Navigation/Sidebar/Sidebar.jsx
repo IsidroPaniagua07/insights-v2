@@ -19,9 +19,9 @@ const Sidebar = () => {
 
 
   return (
-    <nav className='bg-white h-full text-black border-r border-gray-200'>
+    <nav className='bg-white h-full w-full min-w-[230px] text-black border-r border-gray-200'>
       <TrackCurrentUrl />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col w-full items-center">
         <span className='w-full italic font-semibold text-gray-700 text-[1.1em] text-center h-[24px] bg-slate-100 border-b border-gray-200'>
           Navigation
         </span>
