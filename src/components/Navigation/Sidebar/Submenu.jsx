@@ -20,7 +20,7 @@ const Submenu = ({ element}) => {
                     return (
                         <button key={index} onClick={() => navigate(item.link)}
                         className={`w-full flex text-gray-500 flex-row items-center text-left  gap-2 text-[14px] transition-colors
-                                duration-200 btn`}>
+                                duration-200 btnSubMenu`}>
                             {item.label}
                         </button>
                             );

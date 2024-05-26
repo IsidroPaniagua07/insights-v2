@@ -1,6 +1,6 @@
 
 
-const Admin = () => {
+const Roles = () => {
     return (
         <div className="flex h-full w-full rounded-md">
             <section className="flex flex-col w-full  px-4 mx-auto">
@@ -208,7 +208,7 @@ const Admin = () => {
                                             </td>
                                         </tr>
 
-                                      
+
                                     </tbody>
                                 </table>
                             </div>
@@ -252,4 +252,4 @@ const Admin = () => {
     )
 }
 
-export default Admin;
+export default Roles;

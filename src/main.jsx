@@ -12,7 +12,8 @@ import Redeem from './routes/Redeem/Redeem';
 import Reports from './routes/Reports/Reports';
 import GroupManager from './routes/GroupManager/GroupManager';
 import Poker from './routes/Poker/Poker';
-import Admin from './routes/Admin/Admin';
+import Users from './routes/Admin/Users/Users';
+import Roles from './routes/Admin/Roles/Roles';
 import { AuthProvider } from './components/AuthContext/AuthContext';
 import { Provider } from 'react-redux';
 import store from './components/store/store';
@@ -59,12 +60,12 @@ const router = createBrowserRouter([
         element: <ProtectedRoute element={<Poker />} />,
       },
       {
-        path: "/admin",
-        element: <ProtectedRoute element={<Admin />} />,
+        path: "/admin/users",
+        element: <ProtectedRoute element={<Users />} />,
       },
       {
-        path: "/admin/users",
-        element: <ProtectedRoute element={<Admin />} />,
+        path: "/admin/roles",
+        element: <ProtectedRoute element={<Roles />} />,
       },
     ],
   },
