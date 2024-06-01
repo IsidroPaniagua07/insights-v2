@@ -12,15 +12,15 @@ const Submenu = ({ element}) => {
     return (
         <div id="subMenuDiv" className={`subMenuDiv`}
             style={{height: `${(openMenus.includes(element.labelId))
-                        ? 55 * nestedElements.length
+                        ? 38 * nestedElements.length
                         : 0}px`,
                     transition: `height ${nestedElements ? .6 + (.1 * nestedElements.length) : 0}s`}}>
             {nestedElements
                 ? nestedElements.map((item, index) => {
                     return (
                         <button key={index} onClick={() => navigate(item.link)}
-                        className={`w-full flex text-gray-500 flex-row items-center text-left  gap-2 text-[14px] transition-colors
-                                duration-200 btnSubMenu`}>
+                        className={`w-full flex text-gray-900 flex-row items-center text-left  gap-2 text-[14px] transition-colors
+                                duration-200`}>
                             {item.label}
                         </button>
                             );

@@ -6,6 +6,7 @@ import Layout from './components/Layout/Layout';
 import Home from './routes/Home/Home';
 import Login from './routes/Login/Login';
 import History from './routes/History/History';
+import Profile from './routes/Patron/Profile/Profile'
 import Comp from './routes/Patron/Comp/Comp';
 import SwipeLog from './routes/Patron/SwipeLog/SwipeLog';
 import Redeem from './routes/Redeem/Redeem';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/history",
         element: <ProtectedRoute element={<History />} />,
+      },
+      {
+        path: "/patron/profile",
+        element: <ProtectedRoute element={<Profile />} />,
       },
       {
         path: "/patron/comp",

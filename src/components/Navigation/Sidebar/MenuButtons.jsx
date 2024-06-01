@@ -25,6 +25,7 @@ const MenuButtons = () => {
         { labelId: 'home', label: 'Home', link: '/', icon: faHouse },
         { labelId: 'history', label: 'Account History', link: '/history', icon: faClockRotateLeft },
         { labelId: 'patron', label: 'Patron', link: false, icon: faUser, nested: [
+          { labelId: 'profile', label: 'Profile', link: '/patron/profile' },
           { labelId: 'comp', label: 'Comp', link: '/patron/comp' },
           { labelId: 'swipelog', label: 'Kiosk Swipe Log', link: '/patron/swipelog' }
         ]},
@@ -61,7 +62,7 @@ const MenuButtons = () => {
               ? 'bg-[#203A45] text-white'
               : 'hover:bg-[#ececec] hover:text-black text-gray-500 bg-white'}
               w-full flex flex-row items-center text-left px-4 gap-2 py-2 min-h-[43px]
-              transition-colors duration-200 btn text-[20px]`}>
+              transition-colors duration-200 text-[20px]`}>
             <div className="icon">
                 <FontAwesomeIcon icon={element.icon} />
             </div>
