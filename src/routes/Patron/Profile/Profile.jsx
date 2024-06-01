@@ -49,7 +49,7 @@ const Comp = () => {
       <div className='flex flex-col h-full w-full bg-white'>
         <div className='flex flex-row w-full h-[600px]'>
           <div className='h-full w-[65%] border border-black rounded-md'>
-            Detailed Comp Info
+            Player Info
           </div>
           <div className='h-full w-[35%] border border-black rounded-md'>
             Comp rollup
