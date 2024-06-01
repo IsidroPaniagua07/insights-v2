@@ -61,8 +61,8 @@ const MenuButtons = () => {
               ? 'bg-[#203A45] text-white'
               : 'hover:bg-[#ececec] hover:text-black text-gray-500 bg-white'}
               w-full flex flex-row items-center text-left px-4 gap-2 py-2 min-h-[43px]
-              transition-colors duration-200 btn`}>
-            <div className='faDiv '>
+              transition-colors duration-200 btn text-[20px]`}>
+            <div className="icon">
                 <FontAwesomeIcon icon={element.icon} />
             </div>
             <div className="flex flex-row w-full h-full justify-between items items-center ">
