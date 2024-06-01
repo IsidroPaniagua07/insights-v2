@@ -33,11 +33,6 @@
     color: black;
   }
 
-<<<<<<< HEAD
-
-
-  .btnSubMenu {
-=======
   .icon {
     width: 32px;
   }
@@ -46,7 +41,6 @@
 
 
   .btn {
->>>>>>> 1a3fcf189c4184a46c623b62a131f38912851853
     max-height: 55px;
     min-height: 55px;
     height: 55px;
