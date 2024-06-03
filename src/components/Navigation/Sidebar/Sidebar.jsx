@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth } from '../../AuthContext/AuthContext';
 import MenuButtons from './MenuButtons';
 import TrackCurrentUrl from '../TrackCurrentUrl/TrackCurrentUrl';
+import amberCard from '/patron-cards/amber.jpg';
 
 const Sidebar = () => {
   // const { isAuthenticated, login, logout } = useAuth();
@@ -16,19 +17,40 @@ const Sidebar = () => {
   //   )
   // }
 
-
+  const renderCard = () => {
+    return (
+      <>
+        <img src={amberCard} alt='Amber' className='w-[85%] aspect-auto'/>
+        <span>Clark Test Kent</span>
+        <span>1000000554</span>
+        <span className='text-center'>Patron ID data is not on file or ID is expired</span>
+        <span>Patron Image not saved</span>
+        <div className='flex w-full justify-evenly items-center'>
+          <button className='bg-blue-500 hover:bg-white hover:text-black hover:border
+                             border-black transition-all text-white min-w-[45%] h-[28px] text-sm rounded-md'>Notes</button>
+          <button className='bg-blue-500 hover:bg-white hover:text-black hover:border
+                            border-black transition-all text-white min-w-[45%] h-[28px] text-sm rounded-md'>Clear Player</button>
+        </div>
+      </>
+    )
+  }
 
   return (
-    <nav className='bg-white h-full w-full min-w-[230px] max-w-[230px] text-black border-r border-gray-200'>
+    <>
+    <div className='bg-white flex flex-col justify-center items-center text-black py-2'>
+      {renderCard()}
+    </div>
+    <nav className='bg-white min-w max-h-full w-full min-w-[230px] max-w-[230px] text-black border-r border-gray-200 '>
       <TrackCurrentUrl />
       <div className="flex flex-col w-full items-center">
-        <span className='w-full italic font-semibold text-gray-700 text-[1.1em] text-center h-[24px] bg-slate-100 border-b border-gray-200'>
+        <span className='w-full italic font-semibold text-gray-700 text-[.9em] text-center h-[24px] border-b border-t border-black'>
           Navigation
         </span>
           <MenuButtons />
 
       </div>
     </nav>
+    </>
   );
 };
 

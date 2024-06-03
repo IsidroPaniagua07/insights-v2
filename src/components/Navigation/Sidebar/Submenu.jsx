@@ -14,13 +14,12 @@ const Submenu = ({ element}) => {
             style={{height: `${(openMenus.includes(element.labelId))
                         ? 38 * nestedElements.length
                         : 0}px`,
+                    // borderBottom: `${openMenus.includes(element.labelId) ?' 1px solid #203A45' : 'none'}`,
                     transition: `height ${nestedElements ? .6 + (.1 * nestedElements.length) : 0}s`}}>
             {nestedElements
                 ? nestedElements.map((item, index) => {
                     return (
-                        <button key={index} onClick={() => navigate(item.link)}
-                        className={`w-full flex text-gray-900 flex-row items-center text-left  gap-2 text-[14px] transition-colors
-                                duration-200`}>
+                        <button key={index} onClick={() => navigate(item.link)}>
                             {item.label}
                         </button>
                             );

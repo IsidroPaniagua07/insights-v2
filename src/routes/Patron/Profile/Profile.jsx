@@ -1,10 +1,13 @@
 import React from 'react';
 import { useAuth } from '../../../components/AuthContext/AuthContext';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCakeCandles, faUser, faHouse, faEnvelope, faPhone, faIdCard, faCar, faUserTie, faDollarSign, faPeopleGroup, faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons';
 
 const Comp = () => {
   const { isAuthenticated, login, logout } = useAuth();
+  const patronState = useSelector((state) => state.patron);
+  const { patron, loading, error } = patronState;
 
     const notes = [
       {
@@ -54,6 +57,7 @@ const Comp = () => {
 
 
     }
+    console.log(patronState, 'patronState')
 
   return (
     <div className='flex flex-col h-full w-full gap'>
@@ -76,20 +80,20 @@ const Comp = () => {
         ) : null}
       </div>
 
-      <div className='flex flex-col h-[90%] px-2 py-2 w-full bg-white rounded-md'>
+      <div className='flex flex-col h-[90%] py-2 w-full bg-white rounded-md'>
         <div className='flex w-full h-full shadow-2xl rounded-md'>
             <div className='flex flex-col w-[40%] h-full justify-between items-center py-4 px-8'>
               <div className='flex w-full gap-4 justify-start items-center'>
                 <FontAwesomeIcon icon={faUser} size='3x' className='big-icon'/>
                 <div className='flex flex-col text-xl'>
-                  <strong>{testData.name}</strong>
-                  <span>{testData.accountNumber}</span>
+                  <strong>{patron?`${patron.firstName} ${patron.lastName}`: "No Patron"}</strong>
+                  <span>{patron?patron.account: "No Patron"}</span>
                 </div>
               </div>
               <div className='flex w-full gap-4 justify-start items-center'>
                 <FontAwesomeIcon icon={faCakeCandles} size='4x' className='big-icon'/>
                 <div className='flex flex-col text-xl'>
-                  <strong>{testData.birthday}</strong>
+                  <strong>{patron?`${patron.birthDate}`: "No Patron"}</strong>
                   <span>xxx days until bday</span>
                 </div>
               </div>

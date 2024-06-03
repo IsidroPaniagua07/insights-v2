@@ -22,7 +22,8 @@
   .sidebar {
     min-width: 230px;
     max-width: 230px;
-    height: 100%; /* Ensure it takes full height */
+    height: 100%; 
+    background-color: white;
   }
 
   .content {
