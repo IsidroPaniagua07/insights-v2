@@ -3,8 +3,14 @@ import { useAuth } from '../../AuthContext/AuthContext';
 import MenuButtons from './MenuButtons';
 import TrackCurrentUrl from '../TrackCurrentUrl/TrackCurrentUrl';
 import amberCard from '/patron-cards/amber.jpg';
+import { useQuery } from 'react-query';
 
 const Sidebar = () => {
+  const { data, error, isLoading } = useQuery(['patron'], {
+    enabled: false, // This component relies on already fetched data
+  });
+
+
   // const { isAuthenticated, login, logout } = useAuth();
   // if (!isAuthenticated) {
   //   return (
@@ -21,6 +27,7 @@ const Sidebar = () => {
     return (
       <>
         <img src={amberCard} alt='Amber' className='w-[85%] aspect-auto'/>
+        <span>{data?data:'nodata'}</span>
         <span>Clark Test Kent</span>
         <span>1000000554</span>
         <span className='text-center'>Patron ID data is not on file or ID is expired</span>
